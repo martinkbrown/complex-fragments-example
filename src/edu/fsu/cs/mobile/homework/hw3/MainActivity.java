@@ -2,7 +2,6 @@ package edu.fsu.cs.mobile.homework.hw3;
 
 import android.app.Activity;
 import android.app.FragmentTransaction;
-import android.content.Intent;
 import android.content.res.Configuration;
 import android.os.Bundle;
 
@@ -27,7 +26,8 @@ public class MainActivity extends Activity {
     
     private void setupFragments(Configuration config) {
     	
-    	ContactListFragment contactsFragment = (ContactListFragment) getFragmentManager().findFragmentByTag(CONTACTS_FRAGMENT_TAG);
+    	ContactListFragment contactsFragment = (ContactListFragment) getFragmentManager().findFragmentByTag(
+    			CONTACTS_FRAGMENT_TAG);
     	
     	if(contactsFragment == null)
     	{
@@ -58,10 +58,8 @@ public class MainActivity extends Activity {
     		args.putInt("selected", contactsFragment.selected);
     		
     		mTrans.add(R.id.messages_container, messagesFragment, MESSAGES_FRAGMENT_TAG);    		
-    		
     	}
     	
     	mTrans.commit();
-    	
     }
 }

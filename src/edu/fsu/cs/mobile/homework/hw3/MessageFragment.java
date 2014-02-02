@@ -11,12 +11,11 @@ import android.widget.TextView;
 
 public class MessageFragment extends Fragment {
 
-	String[] mMessages = new String[]{"Where are you?", 
+	String[] mMessages = new String[]{ "Where are you?", 
 										"Happy Mother's Day!", 
 										"Volleyball 2pm Saturday", 
-										"Brrrrrt", 
-										"Hahahaha", 
-										"I inteded to go but I had an emergency. I'll tell you about it when I get back", 
+										"See you soon", 
+										"Ha Ha Ha. ROFL!!!",  
 										"YES!"};
 	
 	ArrayList<String> mArrayMsg = new ArrayList<String>();
@@ -44,12 +43,10 @@ public class MessageFragment extends Fragment {
 				mArrayMsg.add(msg);
 				selected = mArrayMsg.size() - 1;
 			}
-			
 		}
 		
 		tv.setText(mArrayMsg.get(selected));
 		
 		return tv;
-		
 	}
 }

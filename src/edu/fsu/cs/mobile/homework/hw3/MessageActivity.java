@@ -20,7 +20,6 @@ public class MessageActivity extends Activity {
 	    mTrans = getFragmentManager().beginTransaction();
 	    mTrans.add(R.id.messages_container, messages, MainActivity.MESSAGES_FRAGMENT_TAG);
 	    mTrans.commit();
-	    
 	}
 
 }
